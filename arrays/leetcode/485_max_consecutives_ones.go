@@ -1,20 +1,36 @@
 package arrays
 
 /*
-You are given an array 'arr' containing 'n' integers. You are also given an integer 'num', and your
-task is to find whether 'num' is present in the array or not. If 'num' is present in the array,
-return 0-based index of the first ocurrence of 'num'. Else, return -1.
+Given a binary array nums, return the maximum number of consecutive 1's in the array.
+
+Example 1:
+
+Input: nums = [1,1,0,1,1,1]
+Output: 3
+Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
+
+Example 2:
+
+Input: nums = [1,0,1,1,0,1]
+Output: 2
+
+Constraints:
+
+    1 <= nums.length <= 105
+    nums[i] is either 0 or 1.
+
+
 
 Source:
 https://leetcode.com/problems/max-consecutive-ones/description/
-
-Complexity Analysis
-    Time complexity: O(n), where n is the length of the input array nums. We iterate through the array once, and the time complexity is linear with respect to the size of the input.
-
-    Space complexity: O(1), as we use only a constant amount of extra space to store maxCount and currentCount, regardless of the size of the input array.
-
 */
 
+/*
+Complexity Analysis
+
+	Time complexity: O(n)
+	Space complexity: O(1)
+*/
 func MaxConsecutiveOnes(nums []int) int {
 	maxCount, currentCount := 0, 0
 

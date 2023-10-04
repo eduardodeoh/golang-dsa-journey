@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-var tests = []struct {
+var maxConsecutiveOneTableTests = []struct {
 	arr      []int
 	expected int
 }{
@@ -15,19 +15,15 @@ var tests = []struct {
 }
 
 func TestMaxConsecutiveOnes(t *testing.T) {
-	for i, test := range tests {
+	for i, test := range maxConsecutiveOneTableTests {
 		if got := MaxConsecutiveOnes(test.arr); !reflect.DeepEqual(got, test.expected) {
-			t.Fatalf("Failed test case #%d. Want %v got %v", i, test.expected, got)
-		}
-
-		if got := MaxConsecutiveOnesAlternative(test.arr); !reflect.DeepEqual(got, test.expected) {
 			t.Fatalf("Failed test case #%d. Want %v got %v", i, test.expected, got)
 		}
 	}
 }
 
 func TestMaxConsecutiveOnesAlternative(t *testing.T) {
-	for i, test := range tests {
+	for i, test := range maxConsecutiveOneTableTests {
 		if got := MaxConsecutiveOnesAlternative(test.arr); !reflect.DeepEqual(got, test.expected) {
 			t.Fatalf("Failed test case #%d. Want %v got %v", i, test.expected, got)
 		}
